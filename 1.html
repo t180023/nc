@@ -1,3 +1,4 @@
+<!-- % Time-stamp: <2016-04-18 11:16:32 junta> -->
 <meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
 <html>
 <head>
@@ -18,13 +19,13 @@
 </head>
 <body>
 
-<h1>$B?tCM7W;;K!5Z$S<B=,(B<br>$BBh(B1$B2s2]Bj(B</h1>
+<h1>数値計算法及び実習<br>第1回課題</h1>
 
-$B0J2<(B2$B$D$N2]Bj$,(B<font color="red">$B$9$Y$F$G$-$?$i!"(B</font>$B650w$^$?$O(BTA$B$r8F$V$3$H!#(B
+以下2つの課題が<font color="red">すべてできたら、</font>教員またはTAを呼ぶこと。
 
 <ol>
  <li> 
-$B0J2<$N%W%m%0%i%`$N(B /* $B$3$3$rKd$a$k(B */ $B$NItJ,$rE,Ev$KKd$a$k$3$H$K$h$C$F!"0J2<$N$h$&$JJ|J*@~$r=q$/%W%m%0%i%`$r:n@.$;$h!#(B
+以下のプログラムの /* ここを埋める */ の部分を適当に埋めることによって、以下のような放物線を書くプログラムを作成せよ。
 
 <pre>
 ****************************************************************
@@ -51,30 +52,30 @@
 
 int f(int x)
 {
-  return /* $B$3$3$rKd$a$k(B */ ;
+  return /* ここを埋める */ ;
 }
 
 int main ()
 {
   int x, y;
 
-  for (x = -8; /* $B$3$3$rKd$a$k(B */ ; /* $B$3$3$rKd$a$k(B */) {
-    for (y = 0; /* $B$3$3$rKd$a$k(B */; y++) {
-      /* $B$3$3$rKd$a$k(B */
+  for (x = -8; /* ここを埋める */ ; /* ここを埋める */) {
+    for (y = 0; /* ここを埋める */; y++) {
+      /* ここを埋める */
     }
-    /* $B$3$3$rKd$a$k(B */
+    /* ここを埋める */
   }
 
 }
 </pre>
 <hr>
-<p>$B%W%m%0%i%`$NJdB-@bL@(B</p>
+<p>プログラムの補足説明</p>
 <ul>
- <li> <p><font face=courier>int f(int x)</font> $B$O!"0z?t$,@0?t$N(B <font face=courier>x</font> $B$G!"JV$jCM$,@0?t$G$"$k4X?t$rI=$7$F$$$k!#9b9;$G=,$C$?4X?t(B $f(x)$ $B$G9M$($l$P!"(B$x$ $B$,0z?t$G!"(B$f(x)$ $B$NCM$,JV$jCM$G$"$k!#(B</p>
+ <li> <p><font face=courier>int f(int x)</font> は、引数が整数の <font face=courier>x</font> で、返り値が整数である関数を表している。高校で習った関数 $f(x)$ で考えれば、$x$ が引数で、$f(x)$ の値が返り値である。</p>
 </ul>
 <hr>
  <li> 
- $B0J2<$N%W%m%0%i%`$O!"G[Ns(B data $B$NMWAG$NCf$G:G$bBg$-$$?t$rI=<($9$k$b$N$G$"$k$,!"$^$@40@.$7$F$$$J$$!#$3$l$r40@.$;$h!#(B($B:GBgCM$r5a$a$k%W%m%0%i%`(B)
+ 以下のプログラムは、配列 data の要素の中で最も大きい数を表示するものであるが、まだ完成していない。これを完成せよ。(最大値を求めるプログラム)
 <pre class="program">
 #include &lt;stdio.h&gt;
 
@@ -85,26 +86,26 @@ int main ()
   int max_data = data[0];
 
   for (i = 1; i < sizeof(data) / sizeof(data[0]); i++) {
-      /* $B$3$3$rKd$a$k(B */
+      /* ここを埋める */
   }
 
-  printf("$B:GBgCM$O(B %d $B$G$9!#(B\n", max_data);
+  printf("最大値は %d です。\n", max_data);
 }
 </pre>
 <hr>
-<p>$B%W%m%0%i%`$NJdB-@bL@(B</p>
+<p>プログラムの補足説明</p>
 <ul>
- <li> <font face=courier>sizeof(data) / sizeof(data[0])</font> $B$O!"G[Ns(B <font face=courier>data[]</font> $B$K4^$^$l$k%G!<%?$N?t$rI=$7$F$$$k!#$3$N%W%m%0%i%`$N>l9g$O(B 10 $B$G$"$k!#(B<font face=courier>sizeof</font> $B$,2?$rI=$7$F$$$k$+$K$D$$$F$O3F<+$GD4$Y$F$_$k$3$H!#(B</ul>
+ <li> <font face=courier>sizeof(data) / sizeof(data[0])</font> は、配列 <font face=courier>data[]</font> に含まれるデータの数を表している。このプログラムの場合は 10 である。<font face=courier>sizeof</font> が何を表しているかについては各自で調べてみること。</ul>
 <hr>
- <li> <p>$BH/E8LdBj(B <font color=red>($BM>M5$N$"$k?M$@$1$d$k$3$H(B)</font></p>
-      $-1 \le x \le 1,\ -1 \le y \le 1 $$B$K$*$$$F!"4X?t(B $ \displaystyle f(x,y)=\frac{2x+2y}{x^2+y^2+1}$ $B$N:GBgCM$r5a$a$?$$!#(B
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      $-1 \le x \le 1,\ -1 \le y \le 1 $において、関数 $ \displaystyle f(x,y)=\frac{2x+2y}{x^2+y^2+1}$ の最大値を求めたい。
 <ol>
- <li> $\displaystyle\frac{\partial f(x,y)}{\partial x} = 0,\ \frac{\partial f(x,y)}{\partial y} = 0$ $B$r9M$($k$3$H$K$h$j!"(B$f(x,y)$ $B$r:GBg$H$9$k(B $x,\, y$ $B$NCM$r5a$a$h!#$^$?:GBgCM$b5a$a$h!#(B($B%W%m%0%i%`$G$O$J$/!"<j7W;;$G5a$a$k$3$H!#(B)
- <li> $B>e$N7k2L$r;H$o$J$$$G!"$"$($F%W%m%0%i%`$@$1$rMQ$$$F(B($BJPHyJ,$J$I$N<j7W;;$r$;$:$K(B)$B!"(B$f(x,y)$ $B$r:GBg$H$9$k(B $x,\, y$ $B$NCM$rA\$9$3$H$r9M$($k!#(B
+ <li> $\displaystyle\frac{\partial f(x,y)}{\partial x} = 0,\ \frac{\partial f(x,y)}{\partial y} = 0$ を考えることにより、$f(x,y)$ を最大とする $x,\, y$ の値を求めよ。また最大値も求めよ。(プログラムではなく、手計算で求めること。)
+ <li> 上の結果を使わないで、あえてプログラムだけを用いて(偏微分などの手計算をせずに)、$f(x,y)$ を最大とする $x,\, y$ の値を捜すことを考える。
       <p></p>
       <ul>
-       <li> $x$ $B$NCM$r(B $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$$B!"(B$y$ $B$NCM$r(B $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$$B$HJQ2=$5$;!"7W(B21$B!_(B21=441$BDL$j$N(B $(x, y)$ $B$KBP$7$F(B $f(x,y)$ $B$NCM$r7W;;$9$k!#$=$NCf$G:GBg$H$J$kCM$rI=<($9$k%W%m%0%i%`$r:n@.$;$h!#(B
-       <li> $x$ $B$H(B $y$ $B$NCM$r$5$i$K:Y$+$/JQ2=$5$;$k$h$&$K%W%m%0%i%`$rJQ99$9$k$3$H$K$h$C$F!"(B$f(x,y)$ $B$N:GBgCM$r$G$-$k$@$1@53N$K5a$a$h!#(B
+       <li> $x$ の値を $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$、$y$ の値を $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$と変化させ、計21×21=441通りの $(x, y)$ に対して $f(x,y)$ の値を計算する。その中で最大となる値を表示するプログラムを作成せよ。
+       <li> $x$ と $y$ の値をさらに細かく変化させるようにプログラムを変更することによって、$f(x,y)$ の最大値をできるだけ正確に求めよ。
       </ul>
 </ol>
 
