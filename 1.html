@@ -5,45 +5,10 @@
 <title></title>
 <link rel="stylesheet" type="text/css" href="kadai.css">
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ["\\(","\\)"]],
-      processEscapes: true
-    },
-    "CommonHTML": {
-      styles: {".MathJax_Preview": {visibility: "hidden"}}
-    },
-    "HTML-CSS": {
-      styles: {".MathJax_Preview": {visibility: "hidden"}}
-    },
-    "SVG": {
-      styles: {".MathJax_Preview": {visibility: "hidden"}}
-    },
-    "NativeMML": {
-      styles: {".MathJax_Preview": {visibility: "hidden"}}
-    },
-	TeX: { extensions: ["https://genkuroki.github.io/xypic.js"] }
-  });
-</script>
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML">
-</script>
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
-<script type="text/javascript">
-$(function() {
-  function makePreview() {
-//    input = $('#input').val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    input = $('#input').val().replace(/\r\n/g, "<br>").replace(/\r/g, "<br>").replace(/\n/g, "<br>")
-    $('#preview').html(input);
-    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"preview"]);
-  }
-  $('body').keyup(function(){makePreview()});
-  $('body').bind('updated',function(){makePreview()});
-  makePreview();
-});
-</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/contrib/auto-render.min.js"></script>
+<script>$(document).ready(function(){renderMathInElement(document.body,{delimiters: [{left: "[[", right: "]]", display: true},{left: "$", right: "$", display: false}]})});</script>
 </head>
 <body>
 
