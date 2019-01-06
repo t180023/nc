@@ -1,0 +1,114 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="kadai.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+</head>
+<body>
+
+<h1>数値計算法及び実習<br>第1回課題</h1>
+
+以下2つの課題が<font color="red">すべてできたら、</font>教員またはTAを呼ぶこと。
+
+<ol>
+ <li> 
+以下のプログラムの /* ここを埋める */ の部分を適当に埋めることによって、以下のような放物線を書くプログラムを作成せよ。
+
+<pre>
+****************************************************************
+*************************************************
+************************************
+*************************
+****************
+*********
+****
+*
+
+*
+****
+*********
+****************
+*************************
+************************************
+*************************************************
+****************************************************************
+</pre>
+
+<pre class="program">
+#include &lt;stdio.h&gt;
+
+int f(int x)
+{
+  return /* ここを埋める */ ;
+}
+
+int main ()
+{
+  int x, y;
+
+  for (x = -8; /* ここを埋める */ ; /* ここを埋める */) {
+    for (y = 0; /* ここを埋める */; y++) {
+      /* ここを埋める */
+    }
+    /* ここを埋める */
+  }
+
+}
+</pre>
+<hr>
+<p>プログラムの補足説明</p>
+<ul>
+ <li> <p><font face=courier>int f(int x)</font> は、引数が整数の <font face=courier>x</font> で、返り値が整数である関数を表している。高校で習った関数 $f(x)$ で考えれば、$x$ が引数で、$f(x)$ の値が返り値である。</p>
+</ul>
+<hr>
+ <li> 
+ 以下のプログラムは、配列 data の要素の中で最も大きい数を表示するものであるが、まだ完成していない。これを完成せよ。(最大値を求めるプログラム)
+<pre class="program">
+#include &lt;stdio.h&gt;
+
+int main ()
+{ 
+  int i;
+  int data[] = { 31, 41, 59, 26, 53, 58, 97, 93, 23, 84 };
+  int max_data = data[0];
+
+  for (i = 1; i < sizeof(data) / sizeof(data[0]); i++) {
+      /* ここを埋める */
+  }
+
+  printf("最大値は %d です。\n", max_data);
+}
+</pre>
+<hr>
+<p>プログラムの補足説明</p>
+<ul>
+ <li> <font face=courier>sizeof(data) / sizeof(data[0])</font> は、配列 <font face=courier>data[]</font> に含まれるデータの数を表している。このプログラムの場合は 10 である。<font face=courier>sizeof</font> が何を表しているかについては各自で調べてみること。</ul>
+<hr>
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      $-1 \le x \le 1,\ -1 \le y \le 1 $において、関数 $ \displaystyle f(x,y)=\frac{2x+2y}{x^2+y^2+1}$ の最大値を求めたい。
+<ol>
+ <li> $\displaystyle\frac{\partial f(x,y)}{\partial x} = 0,\ \frac{\partial f(x,y)}{\partial y} = 0$ を考えることにより、$f(x,y)$ を最大とする $x,\, y$ の値を求めよ。また最大値も求めよ。(プログラムではなく、手計算で求めること。)
+ <li> 上の結果を使わないで、あえてプログラムだけを用いて(偏微分などの手計算をせずに)、$f(x,y)$ を最大とする $x,\, y$ の値を捜すことを考える。
+      <p></p>
+      <ul>
+       <li> $x$ の値を $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$、$y$ の値を $-1.0,\,-0.9,\,-0.8,\cdots,\,0.8,\,0.9,\,1.0$と変化させ、計21×21=441通りの $(x, y)$ に対して $f(x,y)$ の値を計算する。その中で最大となる値を表示するプログラムを作成せよ。
+       <li> $x$ と $y$ の値をさらに細かく変化させるようにプログラムを変更することによって、$f(x,y)$ の最大値をできるだけ正確に求めよ。
+      </ul>
+</ol>
+
+
+</ol><br>
+
+</body> </html>
