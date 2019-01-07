@@ -19,57 +19,57 @@
 </head>
 <body>
 
-<h1>$B?tCM7W;;K!5Z$S<B=,(B<br>$BBh(B12$B2s2]Bj(B</h1>
+<h1>数値計算法及び実習<br>第12回課題</h1>
 <ol>
- <li> $B0J2<$O!"(B2010$BG/(B6$B7n!A(B9$B7n$H(B2012$BG/(B6$B7n!A(B9$B7n$N:G9b5$29$HEENO$N:GBg<{MW$r<($9%G!<%?$G$"$k!#(B
+ <li> 以下は、2010年6月〜9月と2012年6月〜9月の最高気温と電力の最大需要を示すデータである。
       <p><a href="http://www.meti.go.jp/setsuden/pdf/electricity.pdf">
       http://www.meti.go.jp/setsuden/pdf/electricity.pdf</a></p>
 
       <ol>
-       <li> $B>e5-%G!<%?Cf$N!"(B2010$BG/EY$H(B2012$BG/EY$N4X@>EENO4IFb$N:G9b5$29$H:GBg<{MW$r!"%U%!%$%k(B power2010.txt $B$H(B power2012.txt $B$K0J2<$N7A<0$GF~NO$;$h!#$?$@$7!"EZF|=KF|$N%G!<%?$O=|$/$3$H!#(B($B@D$H@V$GEI$i$l$F$$$kItJ,(B)
+       <li> 上記データ中の、2010年度と2012年度の関西電力管内の最高気温と最大需要を、ファイル power2010.txt と power2012.txt に以下の形式で入力せよ。ただし、土日祝日のデータは除くこと。(青と赤で塗られている部分)
 <pre>
 25.1 1110
 28.0 1061
 27.6 1033
 27.0 1120
 </pre>
-$B!!!!!!(B$\vdots$
-       <li> <p>$B%?!<%_%J%k$G(B gnuplot $B$HF~NO$;$h!#(B</p>
-       <li> plot "power2010.txt" , "power2012.txt" $B$HF~NO$9$k$3$H$K$h$C$F!">e$N%G!<%?$KBP$9$k%0%i%U$r:n@.$;$h!#(B
-	    $B%0%i%U$O0J2<$N$h$&$K$J$k!#(B
+　　　$\vdots$
+       <li> <p>ターミナルで gnuplot と入力せよ。</p>
+       <li> plot "power2010.txt" , "power2012.txt" と入力することによって、上のデータに対するグラフを作成せよ。
+	    グラフは以下のようになる。
 	    <p><img src="power.png" alt="640x480(3163bytes)" width="640" height="480"></p>
-       <li> <p>$B>e$N%G!<%?$KBP$7$F!":G>.Fs>hK!$K$h$k6a;w0l<!<0$r5a$a$k%W%m%0%i%`$r:n@.$;$h!#(B</p>
-       <li> $B%W%m%0%i%`$K$h$C$F5a$a$?6a;w0l<!<0$H%G!<%?$r%0%i%U$K$;$h!#%0%i%U$O0J2<$N$h$&$K$J$k!#(B
+       <li> <p>上のデータに対して、最小二乗法による近似一次式を求めるプログラムを作成せよ。</p>
+       <li> プログラムによって求めた近似一次式とデータをグラフにせよ。グラフは以下のようになる。
       <p><img src="power2.png" alt="640x480(4107bytes)" width="640" height="480"></p>
-       <li> $B4X@>EENO$K$h$k$H!":#2F!"%T!<%/;~6!5kEENO$r(B<a href="http://www.kepco.co.jp/corporate/pr/2016/0513_1j.html">2,778$BK|(BkW</a>$B3NJ]$G$-$k8+DL$7$G$"$k!#6a;w0l<!<0$rMQ$$$k$3$H$K$h$C$F!"$3$N%S!<%/;~6!5kEENO$KC#$9$k$H$-$N5$29$r?dDj$;$h!#(B(2010$BG/!"(B2012$BG/!"$=$l$>$l$N6a;w<0$KBP$7$F5a$a$h!#(B)
+       <li> 関西電力によると、今夏、ピーク時供給電力を<a href="http://www.kepco.co.jp/corporate/pr/2016/0513_1j.html">2,778万kW</a>確保できる見通しである。近似一次式を用いることによって、このビーク時供給電力に達するときの気温を推定せよ。(2010年、2012年、それぞれの近似式に対して求めよ。)
 
 <p>
-       <li> $B>e5-%0%i%U$K$*$$$F!"6a;w0l<!<0$+$i$+$J$jN%$l$?E@$,8+$i$l$k$,!"$3$l$O2?$,860x$G$"$k$+9M;!$;$h!#(B
+       <li> 上記グラフにおいて、近似一次式からかなり離れた点が見られるが、これは何が原因であるか考察せよ。
       </ol>
- <li> <p>$BH/E8LdBj(B <font color=red>($BM>M5$N$"$k?M$@$1$d$k$3$H(B)</font></p>
-      <p>$B0J2<$O!"El5~ET7r9/0BA48&5f%;%s%?!<$K$h$kETFb$N4D6-J|<M@~B,Dj7k2L$G$"$k!#(B($BB,Dj>l=j!'El5~ET?7=I6hI4?MD.(B)</p>
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      <p>以下は、東京都健康安全研究センターによる都内の環境放射線測定結果である。(測定場所：東京都新宿区百人町)</p>
       <p><a href="http://monitoring.tokyo-eiken.go.jp/monitoring/past_data.html">
       http://monitoring.tokyo-eiken.go.jp/monitoring/past_data.html
       </a></p>
-      $B2#<4$rB,DjF|!"=D<4$rJ|<M@~$N@~NLN((B ($BC10L(B $BKh;~%^%$%/%m%0%l%$(B) $B$H$9$k$H!"%0%i%U$O0J2<$N$h$&$K$J$k!#(B
+      横軸を測定日、縦軸を放射線の線量率 (単位 毎時マイクログレイ) とすると、グラフは以下のようになる。
       <p><img src="tokyo.png" alt="640x480(3040bytes)" width="640" height="480"></p>
 
-      $B%0%i%U$r8+$k$H!"(B2011$BG/(B3$B7n(B15$BF|$H(B3$B7n(B23$BF|$K1T$$%T!<%/$,$"$k$,!"$3$l$i$OJ!EgBh0l86;RNOH/EE=j;v8N$KH<$&J|<M@-J*<A$NGS=P$,860x$G$"$k!#(B3$B7n(B23$BF|L\0J9_!"J|<M@~$N@~NLN($ODc2<$7$F$$$C$F$$$k$,!"$3$l$OH>8:4|(B8$BF|$G$"$k%h%&AG(B131$B$,Jx2u$7$F$$$C$F$$$k$?$a$@$H9M$($i$l$F$$$k!#8=;~E@$G(B3$B7n=i=\$N%l%Y%k$^$GLa$C$F$$$J$$$N$O!"H>8:4|(B30$BG/$N%;%7%&%`(B137$B$N1F6A$G$"$k$H?dB,$5$l$F$$$k!#(B<br>
+      グラフを見ると、2011年3月15日と3月23日に鋭いピークがあるが、これらは福島第一原子力発電所事故に伴う放射性物質の排出が原因である。3月23日目以降、放射線の線量率は低下していっているが、これは半減期8日であるヨウ素131が崩壊していっているためだと考えられている。現時点で3月初旬のレベルまで戻っていないのは、半減期30年のセシウム137の影響であると推測されている。<br>
 
-$BJ|<M@-J*<A$OJx2u$r5/$3$7!";X?t4X?tE*$K8:?j$7$F$$$/$3$H$,CN$i$l$F$$$k$N$G!"(B3$B7n(B23$BF|0J9_$N%0%i%U$O!"(B
+放射性物質は崩壊を起こし、指数関数的に減衰していくことが知られているので、3月23日以降のグラフは、
 \[
  y = c + b e^{-at} 
 \]
-$B$H$$$&<0$GI=$5$l$k$HM=A[$5$l$k!#$3$N<0$rJQ7A$9$k$H(B
+という式で表されると予想される。この式を変形すると
 \[
  \log (y-c) = \log b - at
 \]
-$B$H$J$k!#$3$3$G(B $c$ $B$NCM$rDj$a!"(B$Y=\log(y-c),\ \log b = B$ $B$H$9$k$H!"(B
+となる。ここで $c$ の値を定め、$Y=\log(y-c),\ \log b = B$ とすると、
 \[
  Y = -at + B
 \]
-$B$H0l<!4X?t$K$J$k$N$G!"%G!<%?$+$i:G>.Fs>hK!$K$h$C$F6J@~$r?dDj$9$k$3$H$,$G$-$k!#(B $B%G!<%?$h$j(B $c$ $B$NCM$r(B $0.0583$ $B$H$7$?$H$-!"(B$a,\ B$ $B$NCM$r5a$a!"%0%i%U$rIA$1!#%0%i%U$O0J2<$N$h$&$K$J$k!#(B
-<p>($BCm0U(B) $c$ = 0.0583 $B$H$$$&$3$H$O!":#8e!"(B0.0583$B%^%$%/%m%0%l%$(B($B%^%$%/%m%7!<%Y%k%H(B)/$B;~$NCM$r<h$jB3$1$k$H$$$&$3$H$,M=A[$5$l$k!#(B3$B7n=i=\$NCM(B 0.0345$B%^%$%/%m%0%l%$(B/$B;~$r<+A34D6-$K$h$k$b$N$H9M$($k$H!"86H/;v8N$K$h$kA}2CJ,$O(B 0.0583 - 0.0345 = 0.0238 $B%^%$%/%m%7!<%Y%k%H(B/$B;~$G$"$k!#(B0.0238$B!_(B24$B;~4V!_(B365$BF|(B = 208$B%^%$%/%m%7!<%Y%k%H(B = 0.208$B%_%j%7!<%Y%k%H(B/$BG/$G$"$j!"9q$K$h$kK!Dj4p=`(B1$B%_%j%7!<%Y%k%H(B/$BG/$r1[$($F$$$J$$!#F|K\$N<+A3J|<M@~NL$r(B0.43$B%_%j%7!<%Y%k%H(B/$BG/$H$9$k$H!"B,DjCM$,(B <font color=red>0.17$B%^%$%/%m%7!<%Y%k%H(B/$B;~(B</font>$B$GK!Dj4p=`$r1[$($k$,!"J!Eg8)$G$O8=:_$G$b(B<a href="http://fukushima-radioactivity.jp">$B$3$N?tCM$r1[$($kCM$,4QB,$5$l$F$$$k!#(B</a>
+と一次関数になるので、データから最小二乗法によって曲線を推定することができる。 データより $c$ の値を $0.0583$ としたとき、$a,\ B$ の値を求め、グラフを描け。グラフは以下のようになる。
+<p>(注意) $c$ = 0.0583 ということは、今後、0.0583マイクログレイ(マイクロシーベルト)/時の値を取り続けるということが予想される。3月初旬の値 0.0345マイクログレイ/時を自然環境によるものと考えると、原発事故による増加分は 0.0583 - 0.0345 = 0.0238 マイクロシーベルト/時である。0.0238×24時間×365日 = 208マイクロシーベルト = 0.208ミリシーベルト/年であり、国による法定基準1ミリシーベルト/年を越えていない。日本の自然放射線量を0.43ミリシーベルト/年とすると、測定値が <font color=red>0.17マイクロシーベルト/時</font>で法定基準を越えるが、福島県では現在でも<a href="http://fukushima-radioactivity.jp">この数値を越える値が観測されている。</a>
 </p>
 
 <p><img src="tokyo2.png" alt="640x480(3613bytes)" width="640" height="480"></p>

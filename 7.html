@@ -19,30 +19,30 @@
 </head>
 <body>
 
-<h1>$B?tCM7W;;K!5Z$S<B=,(B<br>$BBh(B7$B2s2]Bj(B</h1>
+<h1>数値計算法及び実習<br>第7回課題</h1>
 
 <ol>
- <li> <p>$ f(x) = x^2 - 2 = 0$ $B$N2r$r%K%e!<%H%sK!$G5a$a$k%W%m%0%i%`$r:n@.$;$h!#%W%m%0%i%`$O<}B+H=Dj>r7o$K$h$j!"M-8z?t;z$,(B14$B7eDxEY$K$J$C$?$i=*N;$9$k$h$&$K$9$k$3$H!#$^$?!"%W%m%0%i%`$O=i4|CM(B $ x_0$ $B$,F~NO$G$-$k$h$&$K$7!"%W%m%0%i%`$N9=B$$O0J2<$N$h$&$K$9$k$3$H!#(B
+ <li> <p>$ f(x) = x^2 - 2 = 0$ の解をニュートン法で求めるプログラムを作成せよ。プログラムは収束判定条件により、有効数字が14桁程度になったら終了するようにすること。また、プログラムは初期値 $ x_0$ が入力できるようにし、プログラムの構造は以下のようにすること。
 <pre class="program">
 #include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 
 double f(double x)
 {
-    return $B!X4X?t$NCf?H!Y(B;
+    return 『関数の中身』;
 }
 
 double df(double x)
 {
-    return $B!X4X?t$NCf?H!Y(B;
+    return 『関数の中身』;
 }
 
 int main () 
 {
-  /* $B$3$3$K%K%e!<%H%sK!$N%"%k%4%j%:%`$r=q$/(B */
+  /* ここにニュートン法のアルゴリズムを書く */
 }
 </pre>
-$B0J2<$O=i4|CM$r(B 3 $B$H$7$?$H$-$N=PNONc$G$"$k!#(B
+以下は初期値を 3 としたときの出力例である。
 
 <pre>
 3.0000000000000
@@ -53,8 +53,8 @@ int main ()
 1.4142135623731
 1.4142135623731
 </pre>
- <li> <p>$ f(x) = x - 0.5\sin x - 1 = 0$ $B$N2r$N$&$A!"(B$ 0 \lt x \lt 2$ $B$rK~$?$9$b$N$r!"%K%e!<%H%sK!$G5a$a$k%W%m%0%i%`$r:n@.$;$h!#(B</p>
-$B0J2<$O=i4|CM$r(B 3 $B$H$7$?$H$-$N=PNONc$G$"$k!#(B
+ <li> <p>$ f(x) = x - 0.5\sin x - 1 = 0$ の解のうち、$ 0 \lt x \lt 2$ を満たすものを、ニュートン法で求めるプログラムを作成せよ。</p>
+以下は初期値を 3 としたときの出力例である。
 <pre>
 3.0000000000000
 1.7094014462151
@@ -63,14 +63,14 @@ int main ()
 1.4987011337141
 1.4987011335178
 </pre>
- <li> <p>$f(x) = (x-1)(x-2)(x-3) = 0$ $B$N:,$r%K%e!<%H%sK!$G5a$a$k!#=i4|CM(B $x_0$ $B$r(B $ (a)\ x_0 = -2, (b)\ x_0 = 2.8 $ $B$H$7$?>l9g!"$=$l$>$l$I$N2r$K<}B+$9$k$+!"M}M3$H$H$b$KEz$($h!#(B</p>
- <li> <p>$BH/E8LdBj(B <font color=red>($BM>M5$N$"$k?M$@$1$d$k$3$H(B)</font></p>
-      <p>$B%1%W%i!<J}Dx<0(B $ u - e\sin u = l$ $B$r2r$/$3$H$K$h$C$F!"E7BN$N50F;$r5a$a$k$3$H$r9M$($k!#0J2<$N$h$&$J<j=g$G50F;$r5a$a$k!#(B</p>
+ <li> <p>$f(x) = (x-1)(x-2)(x-3) = 0$ の根をニュートン法で求める。初期値 $x_0$ を $ (a)\ x_0 = -2, (b)\ x_0 = 2.8 $ とした場合、それぞれどの解に収束するか、理由とともに答えよ。</p>
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      <p>ケプラー方程式 $ u - e\sin u = l$ を解くことによって、天体の軌道を求めることを考える。以下のような手順で軌道を求める。</p>
 <ol>
- <li> $BN%?4N((B $e = 0.5$ $B$H$7!"(B$l$ $B$r(B 0 $B$+$i(B 6.3 $B$^$G(B 0.1 $B9o$_$GJQ2=$5$;!"$=$l$>$l$N(B $l$ $B$KBP$9$k%1%W%i!<J}Dx<0$N2r(B $u$ $B$r%K%e!<%H%sK!$G5a$a$k!#(B
- <li> $BF@$i$l$?(B $u$ $B$+$i!"(B$x=a(\cos u - e),\ y=a\sqrt{1-e^2}\sin u$ $B$rMQ$$$F!"50F;$r%0%i%U$rIA$/!#$?$@$7!"(B$a = 2$ $B$H$;$h!#(B
+ <li> 離心率 $e = 0.5$ とし、$l$ を 0 から 6.3 まで 0.1 刻みで変化させ、それぞれの $l$ に対するケプラー方程式の解 $u$ をニュートン法で求める。
+ <li> 得られた $u$ から、$x=a(\cos u - e),\ y=a\sqrt{1-e^2}\sin u$ を用いて、軌道をグラフを描く。ただし、$a = 2$ とせよ。
 </ol>
-<p>$B$3$l$r<B9T$9$k%W%m%0%i%`$r:n@.$;$h!#%0%i%U$O(B gnuplot $B$GIA$/$3$H!#%0%i%U$O0J2<$N$h$&$K$J$k!#(B</p>
+<p>これを実行するプログラムを作成せよ。グラフは gnuplot で描くこと。グラフは以下のようになる。</p>
 <img src="fig7.png" alt="640x480(3197bytes)" width="640" height="480">
 
 </ol>

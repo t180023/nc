@@ -19,17 +19,17 @@
 </head>
 <body>
 
-<h1>$B?tCM7W;;K!$*$h$S<B=,(B<br>$BBh(B9$B2s2]Bj(B</h1>
+<h1>数値計算法および実習<br>第9回課題</h1>
 
 <ol>
  <li> 
 <p>
-$BBf7A8x<0$rMQ$$$F(B
+台形公式を用いて
 <p>$\displaystyle \int^1_0 4\sqrt{1-x^2}\, dx$</p>
 <p>$\displaystyle \int^1_0 \frac{4}{1+x^2} dx$</p>
 
-$B$N6a;wCM$r5a$a$k%W%m%0%i%`$r:n@.$;$h!#$?$@$7!"J,3d?t$O!"(B N = 2, 4, 8,
-16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, $B!D(B , 4194304$B$H$9$k!#$^$?!"??$NEz$($r<j$G5a$a$F$*$$$F!"Bf7A8x<0$GF@$i$l$?Ez$H$N8m:9$r$=$l$>$l5a$a$h!#=PNO$O0J2<$N$h$&$K$J$k!#(B</p>
+の近似値を求めるプログラムを作成せよ。ただし、分割数は、 N = 2, 4, 8,
+16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, … , 4194304とする。また、真の答えを手で求めておいて、台形公式で得られた答との誤差をそれぞれ求めよ。出力は以下のようになる。</p>
 <pre>
        2 2.73205080757 -4.095418e-01
        4 2.99570906810 -1.458836e-01
@@ -78,8 +78,8 @@
  2097152 3.14159265359 -4.662937e-14
  4194304 3.14159265359 -3.579359e-13
 </pre>
- <li> <p>$BH/E8LdBj(B <font color=red>($BM>M5$N$"$k?M$@$1$d$k$3$H(B)</font></p>
-      <p>$BF;O)$d@~O)$N%+!<%V$O%/%m%=%$%I6J@~$rMQ$$$F@_7W$5$l$F$$$k!#%/%m%=%$%I6J@~$ND9$5$r(B $l$ $B$H$9$k$H$-!"6J@~$N=*E@$N:BI8$O(B $\displaystyle x(l)=\int_{0}^{l}\cos\frac{\theta^2}{2}d\theta,\ y(l)=\int_{0}^{l}\sin\frac{\theta^2}{2}d\theta$ $B$HI=$9$3$H$,$G$-$k!#?tCM@QJ,$rMQ$$$F!"(B$0\le l \le 4$ $B$NHO0O$G%/%m%=%$%I6J@~$rIA$1!#$?$@$7!":BI8CM$NM-8z7e?t$,(B6$B7eDxEY$K$J$k$h$&$K?tCM@QJ,$9$k$3$H!#%0%i%U$O0J2<$N$h$&$K$J$k!#(B</p>
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      <p>道路や線路のカーブはクロソイド曲線を用いて設計されている。クロソイド曲線の長さを $l$ とするとき、曲線の終点の座標は $\displaystyle x(l)=\int_{0}^{l}\cos\frac{\theta^2}{2}d\theta,\ y(l)=\int_{0}^{l}\sin\frac{\theta^2}{2}d\theta$ と表すことができる。数値積分を用いて、$0\le l \le 4$ の範囲でクロソイド曲線を描け。ただし、座標値の有効桁数が6桁程度になるように数値積分すること。グラフは以下のようになる。</p>
       <img src="fig9.png" alt="640x480(4262bytes)" width="640" height="480">
 </ol>
 </body>
