@@ -19,11 +19,11 @@
 </head>
 <body>
 
-<h1>$B?tCM7W;;K!5Z$S<B=,(B<br>$BBh(B3$B2s2]Bj(B</h1>
+<h1>数値計算法及び実習<br>第3回課題</h1>
 <ol>
- <li> [$BM-8z7e?t!">pJsMn$A(B]
-      <p>$B0J2<$O(B $4.0/3.0$$B!"(B$0.125\times 10^{-N}$$B!"(B$1+0.125\times 10^{-N}\ \
-      (N = 0, 1, 2, \cdots, 20)$ $B$r=PNO$9$k%W%m%0%i%`$G$"$k!#(B</p>
+ <li> [有効桁数、情報落ち]
+      <p>以下は $4.0/3.0$、$0.125\times 10^{-N}$、$1+0.125\times 10^{-N}\ \
+      (N = 0, 1, 2, \cdots, 20)$ を出力するプログラムである。</p>
 <pre class=program>
 #include &lt;stdio.h&gt;
 
@@ -41,7 +41,7 @@ int main ()
   }
 }
 </pre>
-$B<B9T7k2L$O0J2<$N$h$&$K$J$k!#(B
+実行結果は以下のようになる。
 <pre>
                          1.3333333333333332593185
 
@@ -68,16 +68,16 @@ int main ()
 0.0000000000000000000013 1.0000000000000000000000
 </pre>
 <p>
-$N$ $B$NCM$,$I$N$$$/$i$N$H$-$K!"(B$1+0.125\times 10^{-N}$ $B$N7W;;7k2L$K>pJsMn$A$,5/$3$C$F$$$k$+Ez$($h!#(B
+$N$ の値がどのいくらのときに、$1+0.125\times 10^{-N}$ の計算結果に情報落ちが起こっているか答えよ。
 </p>
 <hr>
-<p>$B%W%m%0%i%`$NJdB-@bL@(B</p>
+<p>プログラムの補足説明</p>
 <ul>
- <li> <p><font face=courier>printf</font> $B$N=q<0;XDj(B <font face=courier>%23.22f</font> $B$O!"(B23$B7eJ,$NI}$K>.?tE@0J2<(B22$B7e$^$GI=<($9$k$H$$$&0UL#$G$"$k!#(B</p>
+ <li> <p><font face=courier>printf</font> の書式指定 <font face=courier>%23.22f</font> は、23桁分の幅に小数点以下22桁まで表示するという意味である。</p>
 </ul>
 <hr>
- <li> [$B%"%s%@!<%U%m!<(B]
-      <p>$B0J2<$N%W%m%0%i%`$r<B9T$;$h!#$3$N=PNO7k2L$+$i(B double $B$G07$($k:G>.$N<B?t$O$I$NDxEY$NBg$-$5$G$"$k$+Ez$($h!#(B</p>
+ <li> [アンダーフロー]
+      <p>以下のプログラムを実行せよ。この出力結果から double で扱える最小の実数はどの程度の大きさであるか答えよ。</p>
 
 <pre class=program>
 #include &lt;stdio.h&gt;
@@ -93,15 +93,15 @@ int main ()
 }
 </pre>      
 <hr>
-<p>$B%W%m%0%i%`$NJdB-@bL@(B</p>
+<p>プログラムの補足説明</p>
 <ul>
- <li> $B%W%m%0%i%`$,=PNO$9$k?tCM(B <font face=courier>1.234567e-08</font> $B$O!"(B$1.234567\times 10^{-8}$ $B$rI=$7$F$$$k!#(B
- <li> <p><font face=courier>printf</font> $B$K$*$$$F=q<0;XDj$r(B <font face=courier>%e</font> $B$H$9$k$H!"?tCM(B <font face=courier>0.001234567</font> $B$O(B <font face=courier>1.234567e-03</font> $B$H=PNO$5$l$k!#(B
- <li> <p><font face=courier>printf</font> $B$K$*$$$F=q<0;XDj$r(B <font face=courier>%g</font> $B$H$9$k$H!"(B<font face=courier>%f</font> $B$H(B <font face=courier>%e</font> $B$N$&$A!"E,$7$?J}$,;H$o$l$k!#(B</p>
+ <li> プログラムが出力する数値 <font face=courier>1.234567e-08</font> は、$1.234567\times 10^{-8}$ を表している。
+ <li> <p><font face=courier>printf</font> において書式指定を <font face=courier>%e</font> とすると、数値 <font face=courier>0.001234567</font> は <font face=courier>1.234567e-03</font> と出力される。
+ <li> <p><font face=courier>printf</font> において書式指定を <font face=courier>%g</font> とすると、<font face=courier>%f</font> と <font face=courier>%e</font> のうち、適した方が使われる。</p>
 </ul>
 <hr>
- <li> [$B>pJsMn$A(B]
-      <p>$B0J2<$N%W%m%0%i%`$r<B9T$;$h!#$3$N=PNO7k2L$,(B 2 $B$N%W%m%0%i%`$N=PNO7k2L$H0c$&$N$O2?8N$+Ez$($h!#(B</p>
+ <li> [情報落ち]
+      <p>以下のプログラムを実行せよ。この出力結果が 2 のプログラムの出力結果と違うのは何故か答えよ。</p>
 <pre class=program>
 #include &lt;stdio.h&gt;
 
@@ -115,10 +115,10 @@ int main ()
   }
 }
 </pre>      
- <li> <p>$BH/E8LdBj(B <font color=red>($BM>M5$N$"$k?M$@$1$d$k$3$H(B)</font></p>
-      $B4X?t(B $f(x) = \left\{\begin{array}{l}2x & (0 \le x \lt 1)\\2(x-1) & (1 \le x \lt 2 )\end{array}\right.$ $B$rMQ$$$F!"(B1$B0J2<$N@5$N(B10$B?J>.?t$rF~NO$9$k$H!"$=$N(B2$B?JI=<($N>e0L(B10$B7e$rI=<($9$k%W%m%0%i%`$r:n@.$;$h!#(B($B%R%s%H!'@0?tIt$rF@$k$K$O!"(B(int) $B$r;H$($P$h$$!#(B) 
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      関数 $f(x) = \left\{\begin{array}{l}2x & (0 \le x \lt 1)\\2(x-1) & (1 \le x \lt 2 )\end{array}\right.$ を用いて、1以下の正の10進小数を入力すると、その2進表示の上位10桁を表示するプログラムを作成せよ。(ヒント：整数部を得るには、(int) を使えばよい。) 
 
-<p>($B$3$N4X?t$r;H$C$?$d$jJ}$O!"<B$O<c43LdBj$,$"$k!#(B)</p>
+<p>(この関数を使ったやり方は、実は若干問題がある。)</p>
 
 </ol>
 </body> </html>
