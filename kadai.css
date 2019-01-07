@@ -1,0 +1,93 @@
+h1 {
+	font-size: 20pt;
+	background-color: #eeeeee;
+	color: black;
+	text-align: center;	
+	margin-right: 25%;
+	margin-left: 25%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+td {
+	font-size: 12pt;
+	background-color: #eeeeee;
+	color: black;
+	text-align: center;
+}
+
+td.blue {
+	font-size: 12pt;
+	font-weight: bold;
+	background-color: #bfd9ed;
+	color: black;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+}
+
+div {
+	text-align: left;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}		
+
+pre {
+  font-family: courier, monospace;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Blue;
+  font-style: normal;
+}
+
+pre.program span.primitive {
+  color: Green;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Red;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: OrangeRed;
+  font-style: normal;
+}
+
