@@ -1,0 +1,78 @@
+<!-- % Time-stamp: <2015-04-06 16:55:12 junta> -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="kadai.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+</head>
+<body>
+
+<h1>数値計算法及び実習<br>第7回課題</h1>
+
+<ol>
+ <li> <p>$ f(x) = x^2 - 2 = 0$ の解をニュートン法で求めるプログラムを作成せよ。プログラムは収束判定条件により、有効数字が14桁程度になったら終了するようにすること。また、プログラムは初期値 $ x_0$ が入力できるようにし、プログラムの構造は以下のようにすること。
+<pre class="program">
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+double f(double x)
+{
+    return 『関数の中身』;
+}
+
+double df(double x)
+{
+    return 『関数の中身』;
+}
+
+int main () 
+{
+  /* ここにニュートン法のアルゴリズムを書く */
+}
+</pre>
+以下は初期値を 3 としたときの出力例である。
+
+<pre>
+3.0000000000000
+1.8333333333333
+1.4621212121212
+1.4149984298948
+1.4142137800472
+1.4142135623731
+1.4142135623731
+</pre>
+ <li> <p>$ f(x) = x - 0.5\sin x - 1 = 0$ の解のうち、$ 0 \lt x \lt 2$ を満たすものを、ニュートン法で求めるプログラムを作成せよ。</p>
+以下は初期値を 3 としたときの出力例である。
+<pre>
+3.0000000000000
+1.7094014462151
+1.5090455964419
+1.4987286784980
+1.4987011337141
+1.4987011335178
+</pre>
+ <li> <p>$f(x) = (x-1)(x-2)(x-3) = 0$ の根をニュートン法で求める。初期値 $x_0$ を $ (a)\ x_0 = -2, (b)\ x_0 = 2.8 $ とした場合、それぞれどの解に収束するか、理由とともに答えよ。</p>
+ <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+      <p>ケプラー方程式 $ u - e\sin u = l$ を解くことによって、天体の軌道を求めることを考える。以下のような手順で軌道を求める。</p>
+<ol>
+ <li> 離心率 $e = 0.5$ とし、$l$ を 0 から 6.3 まで 0.1 刻みで変化させ、それぞれの $l$ に対するケプラー方程式の解 $u$ をニュートン法で求める。
+ <li> 得られた $u$ から、$x=a(\cos u - e),\ y=a\sqrt{1-e^2}\sin u$ を用いて、軌道をグラフを描く。ただし、$a = 2$ とせよ。
+</ol>
+<p>これを実行するプログラムを作成せよ。グラフは gnuplot で描くこと。グラフは以下のようになる。</p>
+<img src="fig7.png" alt="640x480(3197bytes)" width="640" height="480">
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!-- % Time-stamp: <2015-04-06 16:54:49 junta> -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="kadai.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+</head>
+<body>
+
+<h1>数値計算法及び実習<br>第5回課題</h1>
+<ol>
+ <ol>
+  <li> <p>以下の漸化式を用いて、円周率を計算するプログラムを作成せよ。誤差を計算するときに必要な円周率の正確な値は各自で調べること。</p>
+      $\displaystyle a_0 = 2,\quad a_n =
+      \frac{n}{2n+1}a_{n-1},\quad \pi = \sum_{n=0}^\infty a_n =
+      2\left(1+\frac{1}{3}+\frac{1\cdot 2}{3\cdot 5}+\frac{1\cdot 2\cdot 3}{3\cdot 5 \cdot 7} + \cdots \right)$
+      <pre>
+      n =  0 のとき π = 2.00000000  誤差:-1.141593e+00
+      n =  1 のとき π = 2.66666667  誤差:-4.749260e-01
+      n =  2 のとき π = 2.93333333  誤差:-2.082593e-01
+      n =  3 のとき π = 3.04761905  誤差:-9.397361e-02
+      n =  4 のとき π = 3.09841270  誤差:-4.317996e-02
+      n =  5 のとき π = 3.12150072  誤差:-2.009193e-02
+      n =  6 のとき π = 3.13215673  誤差:-9.435921e-03
+      n =  7 のとき π = 3.13712954  誤差:-4.463116e-03
+      n =  8 のとき π = 3.13946968  誤差:-2.122973e-03
+      n =  9 のとき π = 3.14057817  誤差:-1.014484e-03
+      n = 10 のとき π = 3.14110602  誤差:-4.866320e-04
+      n = 11 のとき π = 3.14135847  誤差:-2.341811e-04
+      n = 12 のとき π = 3.14147965  誤差:-1.130046e-04
+      n = 13 のとき π = 3.14153799  誤差:-5.466042e-05
+      n = 14 のとき π = 3.14156616  誤差:-2.649424e-05
+      n = 15 のとき π = 3.14157979  誤差:-1.286545e-05
+      n = 16 のとき π = 3.14158640  誤差:-6.257553e-06
+      n = 17 のとき π = 3.14158961  誤差:-3.048002e-06
+      n = 18 のとき π = 3.14159117  誤差:-1.486598e-06
+      n = 19 のとき π = 3.14159193  誤差:-7.259146e-07
+      n = 20 のとき π = 3.14159230  誤差:-3.548495e-07
+      n = 21 のとき π = 3.14159248  誤差:-1.736316e-07
+      n = 22 のとき π = 3.14159257  誤差:-8.503616e-08
+      n = 23 のとき π = 3.14159261  誤差:-4.168096e-08
+      </pre>
+<hr>
+<p>プログラムの補足説明</p>
+<ul>
+ <li> プログラムが出力する数値 <font face=courier>1.234567e-08</font> は、$1.234567\times 10^{-8}$ を表している。
+</ul>
+<hr>
+  <li> <p>級数 $\displaystyle e = \sum_{n=0}^\infty \dfrac{1}{n!} = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \cdots = 1 + \frac{1}{1} + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \cdots$ を用いて、自然対数の底を計算するプログラムを作成せよ。</p>
+       <pre>
+      n =  0 のとき e = 1.00000000000000  誤差:-1.718282e+00
+      n =  1 のとき e = 2.00000000000000  誤差:-7.182818e-01
+      n =  2 のとき e = 2.50000000000000  誤差:-2.182818e-01
+      n =  3 のとき e = 2.66666666666667  誤差:-5.161516e-02
+      n =  4 のとき e = 2.70833333333333  誤差:-9.948495e-03
+      n =  5 のとき e = 2.71666666666667  誤差:-1.615162e-03
+      n =  6 のとき e = 2.71805555555556  誤差:-2.262729e-04
+      n =  7 のとき e = 2.71825396825397  誤差:-2.786021e-05
+      n =  8 のとき e = 2.71827876984127  誤差:-3.058618e-06
+      n =  9 のとき e = 2.71828152557319  誤差:-3.028859e-07
+      n = 10 のとき e = 2.71828180114638  誤差:-2.731266e-08
+      n = 11 のとき e = 2.71828182619849  誤差:-2.260552e-09
+      n = 12 のとき e = 2.71828182828617  誤差:-1.728764e-10
+      n = 13 のとき e = 2.71828182844676  誤差:-1.228573e-11
+      n = 14 のとき e = 2.71828182845823  誤差:-8.149037e-13
+      n = 15 のとき e = 2.71828182845899  誤差:-5.018208e-14
+      n = 16 のとき e = 2.71828182845904  誤差:-2.220446e-15
+      n = 17 のとき e = 2.71828182845905  誤差:4.440892e-16
+      n = 18 のとき e = 2.71828182845905  誤差:4.440892e-16
+</pre>
+  <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+
+<p>以下の漸化式を用いて、円周率を計算するプログラムを作成せよ。</p>
+      <ol>
+       <li> $\displaystyle \pi = 4\sum_{n=0}^\infty
+             \left(-1\right)^n\frac{1}{2n+1} = 4\left(1 - \frac{1}{3} +
+             \frac{1}{5} - \frac{1}{7} + \cdots \right)$
+       <li> $\displaystyle a_0 = 2\sqrt{3},\ b_0 = 3,\
+      a_{n+1} = \frac{2a_n b_n}{a_n + b_n},\ b_{n+1} = \sqrt{a_{n+1}
+      b_n},\ \lim_{n\rightarrow\infty}a_n = \lim_{n\rightarrow\infty}b_n
+      = \pi$
+       <li> $\displaystyle k_0 = \sqrt{\frac12},\ k_{n+1} = \sqrt{\frac12 + \frac12 k_n},\ \frac{2}{\pi} = \prod_{n=0}^\infty k_n$
+       <li> $\displaystyle \pi = 2\sqrt{3}\sum_{n=0}^\infty \frac{1}{2n+1}\left(-\frac{1}{3}\right)^n$ 
+       <li> $\displaystyle \pi = 2\prod_{n=1}^\infty \frac{4n^2}{4n^2-1}
+      = 2\prod_{n=1}^\infty \frac12 \left(\frac{1}{1+\frac{1}{2n}}+\frac{1}{1-\frac{1}{2n}}\right)$
+       <li> $\left\{\begin{array}{ll}& \displaystyle a_0 = \sqrt{2},\
+	    b_0 = 0,\ p_0 = 2 + \sqrt{2},\\ & a_{n+1} =
+	    \frac{\displaystyle\sqrt{a_n} + \frac{1}{\sqrt{a_n}}}{2},\
+	    b_{n+1} = \frac{\sqrt{a_n}(1+b_n)}{a_n+b_n}, p_{n+1} =
+	    \frac{p_n b_{n+1}(1+a_{n+1})}{1+b_{n+1}},\\ &
+	    \displaystyle\lim_{n\rightarrow\infty} p_n = \pi\end{array}\right.$
+
+      </ol>
+
+       </ol>
+</body>
+</html>

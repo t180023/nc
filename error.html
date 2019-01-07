@@ -1,0 +1,95 @@
+<!-- % Time-stamp: <2011-04-05 16:17:02 junta> -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="kadai.css">
+</head>
+<body>
+
+<h1>エラーが出たときの対処法</h1>
+<br>
+<ol>
+ <li> 
+<pre class="program">
+cc: kadai1-2.c: そのようなファイルやディレクトリはありません。
+cc: no input files
+</pre>
+考えられる原因
+<ul>
+ <li> 編集中のプログラムが保存されていない。<br><font color=red>プログラムを保存せよ!</font>
+ <li> 編集中のプログラムがどこか別のディレクトリにある。<br><font color=red>別のディレクトリに移動せよ!</font>
+</ul>
+ <li> 
+<pre class="program">
+kadai1-2.c: In function 'main':
+kadai1-2.c:5: error: 'i' undeclared (first use in this function)
+kadai1-2.c:5: error: (Each undeclared identifier is reported only once
+kadai1-2.c:5: error: for each function it appears in.)
+</pre>
+考えられる原因
+<ul>
+ <li> 変数を宣言し忘れている。( <font face=courier>undeclared</font> のメッセージあり。上記の場合はプログラム中5行目の変数 <font face=courier>i</font> )<br>
+      <font color=red>変数を宣言せよ!</font> (上記の場合は5行目の <font face=courier>i</font> よりも前で)
+</ul>
+ <li> 
+<pre class="program">
+kadai1-2.c: In function 'main':
+kadai1-2.c:8: error: expected ';' before '}' token
+</pre>
+考えられる原因
+<ul>
+ <li> セミコロン(;) を忘れている。( <font face=courier>expected ';'</font>のメッセージあり。)<br>
+      <font color=red>セミコロンを付けよ!</font> 
+</ul>
+ <li> 
+<pre class="program">
+Undefined symbols:
+  "_prinf", referenced from:
+      _main in cciYLN8w.o
+ld: symbol(s) not found
+collect2: ld returned 1 exit status
+</pre>
+考えられる原因
+<ul>
+ <li> スペルミス ( <font face=courier>Undefined symbols</font>のメッセージあり。上記の場合は printf を prinf と間違えている。)<br>
+      <font color=red>スペルミスを直せ!</font>
+</ul>
+ <li> 
+<pre class="program">
+kadai1-2.c:5:10: warning: missing terminating " character
+kadai1-2.c: In function 'main':
+kadai1-2.c:5: error: missing terminating " character
+kadai1-2.c:6: error: expected expression before '}' token
+kadai1-2.c:6: warning: format not a string literal and no format arguments
+kadai1-2.c:6: error: expected ';' before '}' token
+</pre>
+考えられる原因
+<ul>
+ <li> ダブルクォート(")の閉じ忘れ ( <font face=courier>missing terminating " character</font>のメッセージあり。)<br>
+      <font color=red>ダブルクォートを追加せよ!</font>
+</ul>
+ <li> 
+<pre class="program">
+kadai1-2.c: In function 'main':
+kadai1-2.c:10: error: redeclaration of 'i' with no linkage
+kadai1-2.c:5: error: previous declaration of 'i' was here
+</pre>
+考えられる原因
+<ul>
+ <li> 同じ変数を2回宣言している。(<font face=courier>redeclaration</font>のメッセージあり。)<br>
+      <font color=red>余分な宣言を削除せよ!</font>
+</ul>
+ <li> 
+<pre class="program">
+kadai1-2.c: In function 'main':
+kadai1-2.c:10: error: stray '\343' in program
+kadai1-2.c:10: error: stray '\200' in program
+kadai1-2.c:10: error: stray '\200' in program
+</pre>
+考えられる原因
+<ul>
+ <li> 全角スペースがプログラムに混入している。
+</ul>
+</ol>
+</body> </html>

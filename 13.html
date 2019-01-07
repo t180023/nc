@@ -1,0 +1,61 @@
+<!-- % Time-stamp: <2015-04-06 16:56:24 junta> -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp"/>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="kadai.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
+</head>
+<body>
+
+<h1>数値計算法及び実習<br>第13回課題</h1>
+<ol>
+ <li> <p> $\left(\begin{array}{lllll}4 & 1 & 0 & 0 & 0\\2 & 4 & 1 & 0 & 0\\0 & 2 & 4 & 1 & 0\\0 & 0 & 2 & 4 & 1\\0 & 0 & 0 & 2 & 4\end{array}\right)\left(\begin{array}{l}x_0\\x_1\\x_2\\x_3\\x_4\end{array}\right) = \left(\begin{array}{r}2\\-1\\-1\\0\\3\end{array}\right)$の解を、ガウスの消去法で求めるプログラムを作成せよ。プログラムの構造は以下のようにすること。</p>
+<pre class=program>
+#include &lt;stdio.h&gt;
+
+int main ()
+{
+  double a[5][5] = {
+    {4.0, 1.0, 0.0, 0.0, 0.0},
+    {2.0, 4.0, 1.0, 0.0, 0.0},
+    {0.0, 2.0, 4.0, 1.0, 0.0},
+    {0.0, 0.0, 2.0, 4.0, 1.0},
+    {0.0, 0.0, 0.0, 2.0, 4.0}
+  };
+
+  double b[] = {2.0, -1.0, -1.0, 0.0, 3.0};
+
+  int n = sizeof(b) / sizeof(b[0]);
+
+  int i, j, k;
+  double m;
+  double x[n];
+
+  /* ガウスの消去法のプログラムを書く */
+}
+</pre>
+<p>プログラムの出力結果は以下のようになる。</p>
+<pre>
+x[0] = 0.651786
+x[1] = -0.607143
+x[2] = 0.125
+x[3] = -0.285714
+x[4] = 0.892857
+</pre>
+</p>
+</ol>
+</body></html>
+
+
