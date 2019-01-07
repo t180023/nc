@@ -7,18 +7,18 @@
 </head>
 <body>
 
-<h1>$B%(%i!<$,=P$?$H$-$NBP=hK!(B</h1>
+<h1>エラーが出たときの対処法</h1>
 <br>
 <ol>
  <li> 
 <pre class="program">
-cc: kadai1-2.c: $B$=$N$h$&$J%U%!%$%k$d%G%#%l%/%H%j$O$"$j$^$;$s!#(B
+cc: kadai1-2.c: そのようなファイルやディレクトリはありません。
 cc: no input files
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $BJT=8Cf$N%W%m%0%i%`$,J]B8$5$l$F$$$J$$!#(B<br><font color=red>$B%W%m%0%i%`$rJ]B8$;$h(B!</font>
- <li> $BJT=8Cf$N%W%m%0%i%`$,$I$3$+JL$N%G%#%l%/%H%j$K$"$k!#(B<br><font color=red>$BJL$N%G%#%l%/%H%j$K0\F0$;$h(B!</font>
+ <li> 編集中のプログラムが保存されていない。<br><font color=red>プログラムを保存せよ!</font>
+ <li> 編集中のプログラムがどこか別のディレクトリにある。<br><font color=red>別のディレクトリに移動せよ!</font>
 </ul>
  <li> 
 <pre class="program">
@@ -27,20 +27,20 @@ kadai1-2.c:5: error: 'i' undeclared (first use in this function)
 kadai1-2.c:5: error: (Each undeclared identifier is reported only once
 kadai1-2.c:5: error: for each function it appears in.)
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $BJQ?t$r@k8@$7K:$l$F$$$k!#(B( <font face=courier>undeclared</font> $B$N%a%C%;!<%8$"$j!#>e5-$N>l9g$O%W%m%0%i%`Cf(B5$B9TL\$NJQ?t(B <font face=courier>i</font> )<br>
-      <font color=red>$BJQ?t$r@k8@$;$h(B!</font> ($B>e5-$N>l9g$O(B5$B9TL\$N(B <font face=courier>i</font> $B$h$j$bA0$G(B)
+ <li> 変数を宣言し忘れている。( <font face=courier>undeclared</font> のメッセージあり。上記の場合はプログラム中5行目の変数 <font face=courier>i</font> )<br>
+      <font color=red>変数を宣言せよ!</font> (上記の場合は5行目の <font face=courier>i</font> よりも前で)
 </ul>
  <li> 
 <pre class="program">
 kadai1-2.c: In function 'main':
 kadai1-2.c:8: error: expected ';' before '}' token
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $B%;%_%3%m%s(B(;) $B$rK:$l$F$$$k!#(B( <font face=courier>expected ';'</font>$B$N%a%C%;!<%8$"$j!#(B)<br>
-      <font color=red>$B%;%_%3%m%s$rIU$1$h(B!</font> 
+ <li> セミコロン(;) を忘れている。( <font face=courier>expected ';'</font>のメッセージあり。)<br>
+      <font color=red>セミコロンを付けよ!</font> 
 </ul>
  <li> 
 <pre class="program">
@@ -50,10 +50,10 @@ Undefined symbols:
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $B%9%Z%k%_%9(B ( <font face=courier>Undefined symbols</font>$B$N%a%C%;!<%8$"$j!#>e5-$N>l9g$O(B printf $B$r(B prinf $B$H4V0c$($F$$$k!#(B)<br>
-      <font color=red>$B%9%Z%k%_%9$rD>$;(B!</font>
+ <li> スペルミス ( <font face=courier>Undefined symbols</font>のメッセージあり。上記の場合は printf を prinf と間違えている。)<br>
+      <font color=red>スペルミスを直せ!</font>
 </ul>
  <li> 
 <pre class="program">
@@ -64,10 +64,10 @@ kadai1-2.c:6: error: expected expression before '}' token
 kadai1-2.c:6: warning: format not a string literal and no format arguments
 kadai1-2.c:6: error: expected ';' before '}' token
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $B%@%V%k%/%)!<%H(B(")$B$NJD$8K:$l(B ( <font face=courier>missing terminating " character</font>$B$N%a%C%;!<%8$"$j!#(B)<br>
-      <font color=red>$B%@%V%k%/%)!<%H$rDI2C$;$h(B!</font>
+ <li> ダブルクォート(")の閉じ忘れ ( <font face=courier>missing terminating " character</font>のメッセージあり。)<br>
+      <font color=red>ダブルクォートを追加せよ!</font>
 </ul>
  <li> 
 <pre class="program">
@@ -75,10 +75,10 @@ kadai1-2.c: In function 'main':
 kadai1-2.c:10: error: redeclaration of 'i' with no linkage
 kadai1-2.c:5: error: previous declaration of 'i' was here
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $BF1$8JQ?t$r(B2$B2s@k8@$7$F$$$k!#(B(<font face=courier>redeclaration</font>$B$N%a%C%;!<%8$"$j!#(B)<br>
-      <font color=red>$BM>J,$J@k8@$r:o=|$;$h(B!</font>
+ <li> 同じ変数を2回宣言している。(<font face=courier>redeclaration</font>のメッセージあり。)<br>
+      <font color=red>余分な宣言を削除せよ!</font>
 </ul>
  <li> 
 <pre class="program">
@@ -87,9 +87,9 @@ kadai1-2.c:10: error: stray '\343' in program
 kadai1-2.c:10: error: stray '\200' in program
 kadai1-2.c:10: error: stray '\200' in program
 </pre>
-$B9M$($i$l$k860x(B
+考えられる原因
 <ul>
- <li> $BA43Q%9%Z!<%9$,%W%m%0%i%`$K:.F~$7$F$$$k!#(B
+ <li> 全角スペースがプログラムに混入している。
 </ul>
 </ol>
 </body> </html>
