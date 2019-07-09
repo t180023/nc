@@ -1,9 +1,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html>
+
 <head>
-<title></title>
-<link rel="stylesheet" type="text/css" href="kadai.css">
-<script type="text/x-mathjax-config">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="kadai.css">
+  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
@@ -16,67 +17,62 @@
     }
   });
 </script>
-<script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS_HTML" defer> </script></head>
+  <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS_HTML"
+    defer> </script>
+</head>
 <meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
 </head>
+
 <body>
 
-<h1>数値計算法及び実習<br>第12回課題</h1>
-<ol>
- <li> 以下は、2010年6月〜9月と2012年6月〜9月の最高気温と電力の最大需要を示すデータである。
-      <p><a href="http://www.meti.go.jp/setsuden/pdf/electricity.pdf">
-      http://www.meti.go.jp/setsuden/pdf/electricity.pdf</a></p>
-
+  <h1>数値計算法及び実習<br>第12回課題</h1>
+  <ol>
+    <li> <a href="">power2010.txt</a> と<a href="">power2012.txt</a> は、2010年6月〜9月と2012年6月〜9月の最高気温と関西電力管内の最大電力需要を示すデータである。
       <ol>
-       <li> 上記データ中の、2010年度と2012年度の関西電力管内の最高気温と最大需要を、ファイル power2010.txt と power2012.txt に以下の形式で入力せよ。ただし、土日祝日のデータは除くこと。(青と赤で塗られている部分)
-<pre>
-25.1 1110
-28.0 1061
-27.6 1033
-27.0 1120
-</pre>
-　　　$\vdots$
-       <li> <p>ターミナルで gnuplot と入力せよ。</p>
-       <li> plot "power2010.txt" , "power2012.txt" と入力することによって、上のデータに対するグラフを作成せよ。
-	    グラフは以下のようになる。
-	    <p><img src="power.png" alt="640x480(3163bytes)" width="640" height="480"></p>
-       <li> <p>上のデータに対して、最小二乗法による近似一次式を求めるプログラムを作成せよ。</p>
-       <li> プログラムによって求めた近似一次式とデータをグラフにせよ。グラフは以下のようになる。
-      <p><img src="power2.png" alt="640x480(4107bytes)" width="640" height="480"></p>
-       <li> 関西電力によると、今夏、ピーク時供給電力を<a href="http://www.kepco.co.jp/corporate/pr/2016/0513_1j.html">2,778万kW</a>確保できる見通しである。近似一次式を用いることによって、このビーク時供給電力に達するときの気温を推定せよ。(2010年、2012年、それぞれの近似式に対して求めよ。)
-
-<p>
-       <li> 上記グラフにおいて、近似一次式からかなり離れた点が見られるが、これは何が原因であるか考察せよ。
+        <li> 上記データをファイル power2010.txt と power2012.txt として保存せよ。
+        <li>
+          <p>ターミナルで gnuplot と入力せよ。</p>
+        <li> plot "power2010.txt" , "power2012.txt" と入力することによって、上のデータに対するグラフを作成せよ。
+          グラフは以下のようになる。
+          <p><img src="power.png" alt="640x480(3163bytes)" width="640" height="480"></p>
+        <li>
+          <p>上のデータに対して、最小二乗法による近似一次式を求めるプログラムを作成せよ。</p>
+        <li> プログラムによって求めた近似一次式とデータをグラフにせよ。グラフは以下のようになる。
+          <p><img src="power2.png" alt="640x480(4107bytes)" width="640" height="480"></p>
       </ol>
- <li> <p>発展問題 <font color=red>(余裕のある人だけやること)</font></p>
+    <li>
+      <p>発展問題 <font color=red>(余裕のある人だけやること)</font>
+      </p>
       <p>以下は、東京都健康安全研究センターによる都内の環境放射線測定結果である。(測定場所：東京都新宿区百人町)</p>
-      <p><a href="http://monitoring.tokyo-eiken.go.jp/monitoring/past_data.html">
-      http://monitoring.tokyo-eiken.go.jp/monitoring/past_data.html
-      </a></p>
+      <p><a
+          href="http://monitoring.tokyo-eiken.go.jp/mp_shinjuku_air_data_1day_2011.html">http://monitoring.tokyo-eiken.go.jp/mp_shinjuku_air_data_1day_2011.html</a>
+      </p>
       横軸を測定日、縦軸を放射線の線量率 (単位 毎時マイクログレイ) とすると、グラフは以下のようになる。
       <p><img src="tokyo.png" alt="640x480(3040bytes)" width="640" height="480"></p>
 
-      グラフを見ると、2011年3月15日と3月23日に鋭いピークがあるが、これらは福島第一原子力発電所事故に伴う放射性物質の排出が原因である。3月23日目以降、放射線の線量率は低下していっているが、これは半減期8日であるヨウ素131が崩壊していっているためだと考えられている。現時点で3月初旬のレベルまで戻っていないのは、半減期30年のセシウム137の影響であると推測されている。<br>
+      グラフを見ると、2011年3月15日と3月23日に鋭いピークがあるが、これらは福島第一原子力発電所事故に伴う放射性物質の排出が原因である。3月23日目以降、放射線の線量率は低下していっているが、これは半減期8日であるヨウ素131が崩壊していっているためだと考えられている。<br>
 
-放射性物質は崩壊を起こし、指数関数的に減衰していくことが知られているので、3月23日以降のグラフは、
-$$
- y = c + b e^{-at} 
-$$
-という式で表されると予想される。この式を変形すると
-$$
- \log (y-c) = \log b - at
-$$
-となる。ここで $c$ の値を定め、$Y=\log(y-c),\ \log b = B$ とすると、
-$$
- Y = -at + B
-$$
-と一次関数になるので、データから最小二乗法によって曲線を推定することができる。 データより $c$ の値を $0.0583$ としたとき、$a,\ B$ の値を求め、グラフを描け。グラフは以下のようになる。
-<p>(注意) $c$ = 0.0583 ということは、今後、0.0583マイクログレイ(マイクロシーベルト)/時の値を取り続けるということが予想される。3月初旬の値 0.0345マイクログレイ/時を自然環境によるものと考えると、原発事故による増加分は 0.0583 - 0.0345 = 0.0238 マイクロシーベルト/時である。0.0238×24時間×365日 = 208マイクロシーベルト = 0.208ミリシーベルト/年であり、国による法定基準1ミリシーベルト/年を越えていない。日本の自然放射線量を0.43ミリシーベルト/年とすると、測定値が <font color=red>0.17マイクロシーベルト/時</font>で法定基準を越えるが、福島県では現在でも<a href="http://fukushima-radioactivity.jp">この数値を越える値が観測されている。</a>
-</p>
+      放射性物質は崩壊を起こし、指数関数的に減衰していくことが知られているので、3月23日以降のグラフは、
+      $$
+      y = c + b e^{-at}
+      $$
+      という式で表されると予想される。この式を変形すると
+      $$
+      \log (y-c) = \log b - at
+      $$
+      となる。ここで $c$ の値を定め、$Y=\log(y-c),\ \log b = B$ とすると、
+      $$
+      Y = -at + B
+      $$
+      と一次関数になるので、データから最小二乗法によって曲線を推定することができる。 データより $c$ の値を $0.0583$ としたとき、$a,\ B$ の値を求め、グラフを描け。グラフは以下のようになる。
 
-<p><img src="tokyo2.png" alt="640x480(3613bytes)" width="640" height="480"></p>
 
-</ol>
+      <p><img src="tokyo2.png" alt="640x480(3613bytes)" width="640" height="480"></p>
+
+  </ol>
 </body>
+
 </html>
-</body></html>
+</body>
+
+</html>
